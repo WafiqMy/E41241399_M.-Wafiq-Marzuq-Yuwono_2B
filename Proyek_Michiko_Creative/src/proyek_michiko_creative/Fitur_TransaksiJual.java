@@ -311,7 +311,7 @@ public class Fitur_TransaksiJual extends javax.swing.JFrame {
                 tmemberActionPerformed(evt);
             }
         });
-        getContentPane().add(tmember, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 370, 220, 50));
+        getContentPane().add(tmember, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 380, 220, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/fitur penjualan sayang.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 800));

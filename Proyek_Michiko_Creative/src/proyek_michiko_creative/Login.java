@@ -23,6 +23,7 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         conn = Koneksi.getConnection();
+        this.setLocationRelativeTo(null);
 //        RFIDReader rfidReader = new RFIDReader();
 //        rfidReader.setListener(this::authenticateUser);
 //        Thread t = new Thread(rfidReader::readData);

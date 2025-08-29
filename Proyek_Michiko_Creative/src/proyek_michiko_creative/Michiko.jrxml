@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.7715610000000015"/>
+	<property name="ireport.x" value="37"/>
+	<property name="ireport.y" value="285"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT `id_transaksi_jual`, `nama_barang`, `jumlah`, `harga`, `tanggal`, `total_harga`, `id_barang`, `username` FROM `transaksi_jual` WHERE 1]]>
+	</queryString>
+	<field name="id_transaksi_jual" class="java.lang.Integer"/>
+	<field name="nama_barang" class="java.lang.String"/>
+	<field name="jumlah" class="java.lang.Integer"/>
+	<field name="harga" class="java.math.BigDecimal"/>
+	<field name="tanggal" class="java.sql.Timestamp"/>
+	<field name="total_harga" class="java.math.BigDecimal"/>
+	<field name="id_barang" class="java.lang.Integer"/>
+	<field name="username" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="194" splitType="Stretch">
+			<staticText>
+				<reportElement x="201" y="45" width="158" height="43"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jadah.Ko]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="45"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[================================================]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="161" width="555" height="33"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[================================================]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="88" width="158" height="17"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[jl. gatot subroto no 12345]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="105" width="158" height="17"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[+62489456123854]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="201" y="122" width="158" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[""+$P{REPORT_TIME_ZONE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="18" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="11" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="166" splitType="Stretch">
+			<textField>
+				<reportElement x="157" y="39" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nama_barang}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="39" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[nama_barang]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="157" y="59" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{jumlah}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="59" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[jumlah]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="157" y="79" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="79" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[harga]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="157" y="99" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{total_harga}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="99" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[total_harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="120" width="555" height="33"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[================================================]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="12" width="555" height="33"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[================================================]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="269" y="39" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{tanggal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
